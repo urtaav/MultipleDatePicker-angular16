@@ -1,0 +1,98 @@
+/* Add application styles & imports to this file! */
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+:root {
+  --dark-color: #3a3a3a;
+  --primary-color: #ffa164;
+  --secondary-color: #7e2ba7;
+  --black-000: #ffffff;
+  --black-900: #000000;
+  --black-gray: hsla(0, 0%, 100%, 0.7);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.calendar-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columnas */
+  grid-template-rows: repeat(4, auto); /* 4 filas */
+  gap: 10px; /* Espacio entre celdas */
+
+  /* Estilos adicionales para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Cambia a 2 columnas en pantallas más pequeñas */
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Cambia a 1 columna en pantallas más pequeñas */
+  }
+}
+
+.calendar-container-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  height: auto;
+}
+
+/* Estilos para el botón */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #3498db; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Estilo al pasar el cursor sobre el botón */
+.button:hover {
+  background-color: #2980b9; /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilo para botón secundario */
+.secondary-button {
+  background-color: #e74c3c; /* Cambia el color de fondo para el botón secundario */
+}
+
+/* Estilo al pasar el cursor sobre el botón secundario */
+.secondary-button:hover {
+  background-color: #c0392b; /* Cambia el color de fondo al pasar el cursor para el botón secundario */
+}
+
+/* Estilo para botón grande */
+.large-button {
+  padding: 18px 36px; /* Tamaño más grande */
+  font-size: 20px; /* Texto más grande */
+}
+
+/* Estilo para botón pequeño */
+.small-button {
+  padding: 8px 16px; /* Tamaño más pequeño */
+  font-size: 14px; /* Texto más pequeño */
+}
